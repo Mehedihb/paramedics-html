@@ -8365,7 +8365,7 @@ PAGINATION CSS START
 /*----------------------------------------*/
 .brand-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   border-left: 1px solid var(--clr-border-2);
   align-items: center;
 }
