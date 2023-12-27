@@ -8751,6 +8751,7 @@ PAGINATION CSS START
     right: 0px;
     width: 100%;
     margin-top: 20px;
+    text-align: center;
   }
 }
 
@@ -12369,3 +12370,8 @@ p.checkout-coupon input[type=text]:focus {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+.footer-logo {
+  width: 80px;
+  margin-bottom: 35px;
+}

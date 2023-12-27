@@ -81,7 +81,7 @@
                            <a href="tel:+8801234567890">+880123456789</a>
                         </div>
                         <div class="header-link">
-                           <a href="appointment.html" class="fill-btn">
+                           <a class="fill-btn" data-bs-toggle="modal" data-bs-target="#verifyStudentModal">
                               <span class="fill-btn-inner">
                                  <span class="fill-btn-normal">Verify Student</span>
                                  <span class="fill-btn-hover">Verify Student</span>
@@ -206,7 +206,7 @@
    </section>
    <!-- Features area end -->
 
-   
+
 
    <!-- About area start -->
    <section class="about-area p-relative section-space fix">
@@ -375,7 +375,9 @@
                         <span>why Us</span>
                      </div>
                      <h2 class="section-title mb-30">Why choose us?</h2>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book.</p>
                      <div class="button-wrapper mt-45">
                         <a href="#" class="fill-btn">
                            <span class="fill-btn-inner">
@@ -553,6 +555,103 @@
       </div>
    </section>
    <!-- Team area end -->
+   <!-- Footer area start -->
+   <footer>
+      <div class="footer-area theme-bg-4 section-space-medium-top">
+         <div class="footer-style-5">
+            <div class="container">
+               <div class="footer-grid-5">
+                  <div class="footer-widget-5-1">
+                     <div class="footer-logo mb-35">
+                        <a href="index.html"><img src="assets/imgs/logo/logo.svg" alt="image bnot found"></a>
+                     </div>
+                     <div class="theme-social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                     </div>
+                  </div>
+                  <div class="footer-widget-5-2">
+                     <div class="footer-widget-title">
+                        <h4>Support</h4>
+                     </div>
+                     <div class="footer-link">
+                        <ul>
+                           <li><a href="#">About Us</a></li>
+                           <li><a href="#">Contact Us</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="footer-widget-5-3">
+                     <div class="footer-widget-title">
+                        <h4>Useful Links</h4>
+                     </div>
+                     <div class="footer-link">
+                        <ul>
+                           <li><a href="#">Our Courses</a></li>
+                           <li><a href="#">Verify Student</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="footer-widget-5-4">
+                     <div class="footer-widget-title">
+                        <h4>Contact Us</h4>
+                     </div>
+                     <div class="footer-info">
+                        <div class="footer-info-item-2">
+                           <div class="footer-info-text-2">
+                              <p>Phone :<a href="tel:+8801234567890"> +8801234567890</a></p>
+                           </div>
+                        </div>
+                        <div class="footer-info-item-2">
+                           <div class="footer-info-text-2">
+                              <span><a href="mailto:mehedi.all.info@gmail.com">mehedi.all.info@gmail.com</a></span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="footer-copyright-area">
+                  <div class="container">
+                     <div class="footer-copyright-wrapper">
+                        <div class="footer-copyright-text">
+                           <p class="mb-0">© All Copyright 2023 by <a target="_blank" href="#">Company Name</a></p>
+                        </div>
+                        <div class="footer-conditions">
+                           <ul>
+                              <li><a href="#">Terms Condition</a></li>
+                              <li><a href="#">Privacy Policy</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- Footer area end -->
+
+   <!-- Modal -->
+   <div class="modal fade" id="verifyStudentModal" tabindex="-1" aria-labelledby="verifyStudentModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-body">
+               <input type="text" placeholder="Enter Student Id" class="form-control" id="recipient-name">
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+               <a href="student-details.html" class="fill-btn ">
+                  <span class="fill-btn-inner">
+                     <span class="fill-btn-normal">Verify Now</span>
+                     <span class="fill-btn-hover">Verify Now</span>
+                  </span>
+               </a>
+            </div>
+         </div>
+      </div>
+   </div>
 
 
    <!-- JS here -->
