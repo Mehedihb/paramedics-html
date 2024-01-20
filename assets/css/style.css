@@ -1926,6 +1926,9 @@ button[class*=-dark]:hover {
 ================================================== */
 /* 3.02 - Site Footer - Start
 ================================================== */
+.site_footer .site_logo img {
+  height: 48px;
+}
 .site_footer .info_list {
   margin: -6px -15px;
 }
