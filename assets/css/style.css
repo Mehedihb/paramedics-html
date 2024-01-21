@@ -17,7 +17,6 @@
 2 - Template Elements
 * - 2.01 - Template Colors
 * - 2.02 - Template CSS Animations
-* - 2.03 - Backtotop Button
 * - 2.04 - Template Gapping or Spacing
 * - 2.05 - Order & Unorder List
 * - 2.06 - Buttons
@@ -310,14 +309,6 @@ mark {
 ================================================== */
 /* 2.02 - Template CSS Animations - Start
 ================================================== */
-.decoration_wrapper {
-  z-index: 1;
-  position: relative;
-}
-.decoration_wrapper .decoration_item {
-  z-index: -1;
-  position: absolute;
-}
 
 @-webkit-keyframes phoneRinging {
   from {
@@ -397,48 +388,11 @@ mark {
           animation: spin 5000ms infinite linear;
 }
 
-/* 2.02 - Template CSS Animations - End
-================================================== */
-/* 2.03 - Backtotop Button - Start
-================================================== */
-.backtotop {
-  right: 15px;
-  z-index: 999;
-  bottom: 96px;
-  display: none;
-  position: fixed;
-}
-.backtotop .scroll {
-  z-index: 1;
-  width: 44px;
-  height: 44px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 16px;
-  position: relative;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: var(--bs-white);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: var(--bs-secondary);
-  border-radius: var(--bs-border-radius-pill);
-}
-.backtotop .scroll i {
-  -webkit-animation: bttIconMover 1s infinite alternate;
-          animation: bttIconMover 1s infinite alternate;
-}
-
-/* 2.03 - Backtotop Button - End
-================================================== */
 /* 2.04 - Template Gapping or Spacing - Start
 ================================================== */
 .section_space_lg {
-  padding-top: 150px;
-  padding-bottom: 160px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .section_space_md {
@@ -579,38 +533,6 @@ mark {
   border-color: var(--bs-primary);
   background-color: var(--bs-primary);
 }
-
-.post_meta > li {
-  font-size: 16px;
-  line-height: 26px;
-  position: relative;
-}
-.post_meta > li:not(:last-child) {
-  margin-right: 15px;
-  padding-right: 14px;
-}
-.post_meta > li:not(:last-child):before {
-  top: 50%;
-  right: 0;
-  width: 1px;
-  content: "";
-  height: 22px;
-  position: absolute;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  background-color: var(--bs-border-color);
-}
-.post_meta > li i {
-  color: var(--bs-primary);
-}
-.post_meta > li > a {
-  display: block;
-  color: var(--bs-body-color);
-}
-.post_meta > li > a:hover {
-  color: var(--bs-primary);
-}
-
 .contact_info_list {
   margin: -15px;
 }
@@ -1086,7 +1008,7 @@ button[class*=-dark]:hover {
 ================================================== */
 /* 2.09 - Carousel or Slider - Start
 ================================================== */
-.slick-dots {
+/* .slick-dots {
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1204,7 +1126,7 @@ button[class*=-dark]:hover {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-}
+} */
 
 /* 2.09 - Carousel or Slider - End
 ================================================== */
@@ -1244,22 +1166,6 @@ button[class*=-dark]:hover {
   left: 0;
   bottom: 0;
 }
-.image_widget .about_video_icon {
-  top: 50%;
-  left: -75px;
-  z-index: 99;
-  position: absolute;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.image_widget.text-center .about_video_icon {
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
 .images_group_widget {
   z-index: 1;
   width: 100%;
@@ -1513,16 +1419,6 @@ button[class*=-dark]:hover {
   .mfp-iframe-holder .mfp-content {
     max-width: 100%;
   }
-}
-.video_wrapper {
-  position: relative;
-  padding: 180px 60px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-blend-mode: overlay;
-  background-position: center center;
-  border-radius: var(--bs-border-radius);
-  background-color: rgba(13, 13, 13, 0.2);
 }
 
 /* 2.12 - Video - End
@@ -1976,17 +1872,6 @@ button[class*=-dark]:hover {
   overflow: hidden;
   padding: 55px 0 62px;
   background-color: var(--bs-primary-bg-subtle);
-}
-.page_banner .decoration_item {
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-.page_banner .decoration_item.shape_leaf_1 {
-  left: 0;
-}
-.page_banner .decoration_item.shape_leaf_2 {
-  right: 0;
 }
 
 .site_header + main > .page_banner {
@@ -2504,14 +2389,6 @@ button[class*=-dark]:hover {
 .blog_item_small .item_title a:hover {
   color: var(--bs-primary);
 }
-.blog_item_small .post_meta > li {
-  font-size: 14px;
-  line-height: 24px;
-}
-.blog_item_small .post_meta > li:not(:last-child) {
-  margin-right: 11px;
-  padding-right: 10px;
-}
 .blog_item_small:hover .blog_image_wrap img {
   -webkit-transform: scale(1.08);
           transform: scale(1.08);
@@ -2557,30 +2434,6 @@ button[class*=-dark]:hover {
 }
 
 /* 4.11 - Testimonial - End
-================================================== */
-/* 4.12 - Consultation Form - Start
-================================================== */
-.consultation_form {
-  overflow: hidden;
-  padding: 120px 35px;
-  border-radius: var(--bs-border-radius-xxl);
-}
-.consultation_form .section_heading {
-  margin-bottom: 30px;
-}
-.consultation_form .shape_leaf_1 {
-  top: -90px;
-  right: -110px;
-  max-width: 380px;
-}
-.consultation_form .shape_leaf_2 {
-  left: -130px;
-  bottom: -94px;
-  max-width: 390px;
-}
-
-/* 4.12 - Consultation Form - End
-================================================== */
 /* 5.01 About Page - Start
 ================================================== */
 .about_content .section_heading .section_heading_description {
@@ -2608,9 +2461,6 @@ button[class*=-dark]:hover {
 [class*=_details_section] .details_content p {
   font-size: 20px;
   line-height: 32px;
-  margin-bottom: 40px;
-}
-[class*=_details_section] .video_wrapper {
   margin-bottom: 40px;
 }
 
@@ -2809,35 +2659,6 @@ button[class*=-dark]:hover {
           order: -1;
   bottom: 0;
   padding: 0 0 10px;
-}
-
-blockquote {
-  padding: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 40px;
-  border-radius: var(--bs-border-radius);
-  background-color: var(--bs-primary-bg-subtle);
-}
-blockquote .quote_icon {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50px;
-          flex: 0 0 50px;
-  margin: 0 30px 0 0;
-}
-blockquote span {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 30px;
-  margin-bottom: 20px;
-  color: var(--bs-dark);
-  font-family: var(--bs-font-heading);
-}
-blockquote cite {
-  font-size: 18px;
-  line-height: 28px;
-  color: var(--bs-body-color);
 }
 
 .post_tagsandshare {
@@ -3052,8 +2873,8 @@ Responsive For Mobile & Tablet Devices
     max-width: 250px;
   }
   .section_space_lg {
-    padding-top: 100px;
-    padding-bottom: 110px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
   .section_heading .section_heading_text {
     font-size: 36px;
@@ -3084,14 +2905,6 @@ Responsive For Mobile & Tablet Devices
   }
   .image_widget:has(.bg_secondary_light) {
     padding: 0 30px 45px 45px;
-  }
-  .post_meta > li {
-    font-size: 14px;
-    line-height: 24px;
-  }
-  .post_meta > li:not(:last-child) {
-    margin-right: 12px;
-    padding-right: 11px;
   }
   .blog_item .item_title {
     font-size: 20px;
@@ -3187,11 +3000,6 @@ Responsive For Mobile & Tablet Devices
     width: 100px;
     height: 100px;
     font-size: 30px;
-  }
-  .image_widget .about_video_icon {
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
   }
   .error_section [class*=shape_leaf],
   .pricing_section [class*=shape_leaf] {
@@ -3361,13 +3169,6 @@ Responsive For Mobile & Tablet Devices
   .slick-dots {
     padding-top: 30px;
   }
-  .consultation_form {
-    padding: 80px 60px;
-    border-radius: 30px;
-  }
-  .consultation_form [class*=shape_leaf] {
-    max-width: 270px;
-  }
   .accordion .accordion-item .accordion-button {
     padding: 20px 0 19px;
   }
@@ -3485,14 +3286,6 @@ Responsive For Mobile & Tablet Devices
   .hero_section {
     padding: 120px 0 100px;
   }
-  .backtotop .scroll {
-    width: 38px;
-    height: 38px;
-    font-size: 15px;
-  }
-  .backtotop {
-    bottom: 74px;
-  }
   .site_footer_content {
     padding: 78px 0 60px;
   }
@@ -3519,21 +3312,6 @@ Responsive For Mobile & Tablet Devices
   .contact_infobox_wrapper > [class*="-3"] {
     width: 100%;
   }
-  .video_wrapper {
-    padding: 110px 30px;
-  }
-  blockquote {
-    padding: 40px;
-    display: block;
-    margin-bottom: 30px;
-  }
-  blockquote .quote_icon {
-    margin: 0 0 20px 0;
-  }
-  blockquote span {
-    font-size: 20px;
-    line-height: 26px;
-  }
   .blog_post_author {
     padding: 40px;
     display: block;
@@ -3550,37 +3328,12 @@ Responsive For Mobile & Tablet Devices
   .comment_list_wrap .btn_reply {
     position: static;
   }
-  .error_section h1 {
-    font-size: 200px;
-    margin-bottom: 30px;
-  }
-  .error_section h2 {
-    font-size: 36px;
-  }
-  .consultation_form {
-    padding: 60px 30px;
-  }
+
+
   .section_heading {
     margin-bottom: 20px;
   }
   .pricing_toggle_btn_wrap {
-    margin-bottom: 20px;
-  }
-  .consultation_form .section_heading {
-    margin-bottom: 20px;
-  }
-  .consultation_form {
-    margin: 0 -15px;
-    border-radius: 0;
-    padding: 70px 30px 80px;
-  }
-  .pricing_item .pricing_heading {
-    font-size: 22px;
-    line-height: 28px;
-  }
-  .contact_info_box .item_title {
-    line-height: 1;
-    font-size: 22px;
     margin-bottom: 20px;
   }
   .team_item .team_memder_designation {
@@ -3657,9 +3410,6 @@ Responsive For Mobile & Tablet Devices
   .gmap_canvas iframe {
     height: 300px;
   }
-  .backtotop {
-    bottom: 98px;
-  }
   .service_item {
     padding: 35px;
   }
@@ -3695,8 +3445,8 @@ Responsive For Mobile & Tablet Devices
     height: 300px;
   }
   .section_space_lg {
-    padding-top: 70px;
-    padding-bottom: 80px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   .accordion .accordion-item .accordion-button {
     font-size: 18px;
@@ -3763,9 +3513,6 @@ Responsive For Mobile & Tablet Devices
     height: 80px;
     font-size: 24px;
   }
-  .consultation_form {
-    padding: 70px 15px 80px;
-  }
   .blog_item .item_title {
     font-size: 18px;
     line-height: 24px;
@@ -3792,12 +3539,6 @@ Responsive For Mobile & Tablet Devices
   }
   .page_banner [class*=shape_leaf] {
     max-width: 100px;
-  }
-  .page_banner .decoration_item.shape_leaf_1 {
-    left: -20px;
-  }
-  .page_banner .decoration_item.shape_leaf_2 {
-    right: -20px;
   }
 }
 /* Media Screen 375px - End
@@ -4332,3 +4073,5 @@ Responsive For Mobile & Tablet Devices
   background: var(--clr-theme-secondary);
   border-color: transparent;
 }
+
+
