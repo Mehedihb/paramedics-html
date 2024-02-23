@@ -1,66 +1,4 @@
 @charset "UTF-8";
-/* Table Of Content - start
-================================================== */
-/*
-* Project Name   :  Talking Minds – Psychotherapist Site Template
-* File           :  CSS Base
-* Version        :  1.0.0
-* Last change    :  19 August 2023, Saturday
-* Author         :  Merkulove (https://1.envato.market/tf-merkulove)
-
-==================================================
-
-1 - Template Global Settings
-* - 1.1 - Template Fonts
-* - 1.2 - Template Reset
-
-2 - Template Elements
-* - 2.01 - Template Colors
-* - 2.02 - Template CSS Animations
-* - 2.04 - Template Gapping or Spacing
-* - 2.05 - Order & Unorder List
-* - 2.06 - Buttons
-* - 2.07 - Typography
-* - 2.08 - Authorbox
-* - 2.09 - Carousel or Slider
-* - 2.10 - Image
-* - 2.11 - Form
-* - 2.12 - Video
-* - 2.13 - Social Icons
-* - 2.14 - Counter
-* - 2.15 - Rating Star
-* - 2.16 - Accordion
-* - 2.17 - Pagination Nav
-
-3 - Template Parts
-* - 3.01 - Site Header
-* - 3.02 - Site Footer
-* - 3.03 - Page Header, Page Banner, Breadcrumb
-* - 3.04 - Sidebar
-
-4 - Template Components
-* - 4.01 - Page Hero Section
-* - 4.02 - Service
-* - 4.03 - Team
-* - 4.04 - Pricing
-* - 4.05 - Certificate
-* - 4.06 - Work Process
-* - 4.07 - Policy
-* - 4.08 - Gallery
-* - 4.09 - Comment
-* - 4.10 - Blog
-* - 4.11 - Testimonial
-* - 4.12 - Consultation
-
-5 - Template Pages
-* - 5.01 - About Page
-* - 5.02 - All Details Pages
-* - 5.03 - Contact Page
-* - 5.04 - Error Page
-
-*/
-/* Table Of Content - end
-================================================== */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 :root {
@@ -572,7 +510,9 @@ mark {
   margin-bottom: 16px;
 }
 
-.post_category_list a {
+.post_category_list li {
+  cursor: pointer;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -585,7 +525,7 @@ mark {
   justify-content: space-between;
 }
 
-.post_category_list a:hover {
+.post_category_list li:hover {
   color: var(--bs-secondary);
 }
 
@@ -2118,39 +2058,6 @@ button[class*=-dark]:hover {
 
 /* 3.03 - Page Header, Page Banner, Breadcrumb - End
 ================================================== */
-/* 3.04 - Sidebar - Start
-================================================== */
-.sidebar>*:not(:last-child) {
-  margin-bottom: 60px;
-}
-
-.sidebar_widget_title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.sidebar_widget_title .title_icon {
-  max-width: 22px;
-  margin-bottom: -2px;
-}
-
-.sidebar_widget_title .title_icon img {
-  display: block;
-}
-
-.sidebar_widget_title .title_text {
-  font-size: 24px;
-  line-height: 30px;
-  padding-left: 10px;
-}
-
-/* 3.04 - Sidebar - End
-================================================== */
 /* 4.01 - Page Hero Section - Start
 ================================================== */
 .hero_section {
@@ -2735,31 +2642,28 @@ button[class*=-dark]:hover {
 }
 
 .service_author,
-.service_cost_info {
-  padding: 53px 60px;
-  -webkit-transition: var(--bs-transition);
-  transition: var(--bs-transition);
+.boxcontainer-widget {
+  padding: 32px 24px;
   background-color: var(--bs-white);
   border-radius: var(--bs-border-radius);
-  -webkit-box-shadow: 0px 8px 30px 0px rgba(43, 171, 160, 0.07);
-  box-shadow: 0px 8px 30px 0px rgba(43, 171, 160, 0.07);
+  box-shadow: var(--bs-box-shadow);
 }
 
-.service_author:hover,
-.service_cost_info:hover {
+/* .service_author:hover,
+.boxcontainer-widget:hover {
   -webkit-transform: translateY(4px);
   transform: translateY(4px);
   -webkit-box-shadow: var(--bs-box-shadow);
   box-shadow: var(--bs-box-shadow);
-}
+} */
 
 .service_author .details_info_title,
-.service_cost_info .details_info_title {
+.boxcontainer-widget .details_info_title {
   margin-bottom: 30px;
 }
 
 .service_author p,
-.service_cost_info p {
+.boxcontainer-widget p {
   margin-bottom: 30px;
 }
 
@@ -2801,7 +2705,7 @@ button[class*=-dark]:hover {
   transform: unset;
 }
 
-.service_cost_info .item_price {
+.boxcontainer-widget .item_price {
   margin-bottom: 30px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -2811,7 +2715,7 @@ button[class*=-dark]:hover {
   align-items: flex-end;
 }
 
-.service_cost_info .item_price .price_value {
+.boxcontainer-widget .item_price .price_value {
   font-size: 54px;
   font-weight: 800;
   line-height: 46px;
@@ -2819,7 +2723,7 @@ button[class*=-dark]:hover {
   font-family: var(--bs-font-heading);
 }
 
-.service_cost_info .item_price sub {
+.boxcontainer-widget .item_price sub {
   bottom: 0;
   line-height: 1;
   color: #8C8F92;
@@ -2828,22 +2732,22 @@ button[class*=-dark]:hover {
   display: inline-block;
 }
 
-.service_cost_info.p-0 {
+.boxcontainer-widget.p-0 {
   -webkit-box-shadow: none;
   box-shadow: none;
   background-color: transparent;
 }
 
-.service_cost_info.p-0:hover {
+.boxcontainer-widget.p-0:hover {
   -webkit-transform: unset;
   transform: unset;
 }
 
-.service_cost_info.p-0 .details_info_title {
+.boxcontainer-widget.p-0 .details_info_title {
   margin-bottom: 20px;
 }
 
-.service_cost_info.p-0 .item_price {
+.boxcontainer-widget.p-0 .item_price {
   text-align: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2854,7 +2758,7 @@ button[class*=-dark]:hover {
   flex-direction: column;
 }
 
-.service_cost_info.p-0 .item_price sub {
+.boxcontainer-widget.p-0 .item_price sub {
   -webkit-box-ordinal-group: 0;
   -ms-flex-order: -1;
   order: -1;
@@ -2959,7 +2863,7 @@ button[class*=-dark]:hover {
 }
 
 .conatiner_box {
-  padding: 100px 60px;
+  padding: 40px 40px;
   border-radius: 24px;
   background-color: var(--bs-white);
   border-radius: var(--bs-border-radius);
@@ -2967,22 +2871,6 @@ button[class*=-dark]:hover {
   box-shadow: 0px 8px 30px 0px rgba(43, 171, 160, 0.07);
 }
 
-/* 5.03 - Contact Page - End
-================================================== */
-
-/*
-Responsive For Mobile & Tablet Devices
-==================================================
-* Project Name   :  Talking Minds – Psychotherapist Site Template
-* File           :  CSS Base
-* Version        :  1.0.0
-* Last change    :  19 August 2023, Saturday
-* Author         :  Merkulove (https://1.envato.market/tf-merkulove)
-*	CSS code for responsive layout To make responsive
-==================================================
-*/
-/* Media Screen 1440px - Start
-================================================== */
 @media screen and (max-width: 1440px) {
   :root {
     --bs-body-font-size: 16px;
@@ -3586,7 +3474,7 @@ Responsive For Mobile & Tablet Devices
   }
 
   .service_author,
-  .service_cost_info {
+  .boxcontainer-widget {
     padding: 40px;
   }
 
@@ -3771,21 +3659,21 @@ Responsive For Mobile & Tablet Devices
     line-height: 24px;
   }
 
-  .service_cost_info .item_price .price_value {
+  .boxcontainer-widget .item_price .price_value {
     font-size: 42px;
     line-height: 34px;
   }
 
-  .service_cost_info .item_price sub {
+  .boxcontainer-widget .item_price sub {
     font-size: 16px;
   }
 
-  .service_cost_info .item_price {
+  .boxcontainer-widget .item_price {
     margin-bottom: 20px;
   }
 
   .service_author .details_info_title,
-  .service_cost_info .details_info_title {
+  .boxcontainer-widget .details_info_title {
     margin-bottom: 24px;
   }
 }
@@ -4485,4 +4373,80 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
   color: var(--clr-common-white);
   background: var(--clr-theme-secondary);
   border-color: transparent;
+}
+
+
+
+
+.radio-container {
+  display: flex;
+  gap: 24px;
+  justify-content: start;
+}
+
+.radio-container .single-radio [type="checkbox"]:not(:checked),
+.radio-container .single-radio [type="radio"]:checked,
+.radio-container .single-radio [type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.radio-container .single-radio .checkbox-tools:checked+label,
+.radio-container .single-radio .checkbox-tools:not(:checked)+label {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid var(--bs-border-color);
+  -webkit-transition: all 300ms linear;
+  transition: all 300ms linear;
+  padding: 16px 32px;
+}
+
+
+.radio-container .single-radio .checkbox-tools:checked+label {
+  background-color: var(--bs-primary);
+}
+
+.radio-container .single-radio .checkbox-tools:checked+label::before,
+.radio-container .single-radio .checkbox-tools:not(:checked)+label::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bs-primary);
+  border: 1px solid var(--bs-primary);
+  z-index: -1;
+}
+
+.radio-container .single-radio .checkbox-tools:checked+label span,
+.radio-container .single-radio .checkbox-tools:not(:checked)+label span {
+  height: 80px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio-container .single-radio .checkbox-tools:checked+label span img,
+.radio-container .single-radio .checkbox-tools:not(:checked)+label span img {
+  height: 100%;
+  width: 100%;
+}
+
+.radio-container .single-radio .checkbox-tools:checked+label p,
+.radio-container .single-radio .checkbox-tools:not(:checked)+label p {
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0px;
+  color: var(--bs-dark);
 }
