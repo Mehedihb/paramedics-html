@@ -9,8 +9,7 @@
   <title>Paramedics - Gallery</title>
   <link rel="Fav Icon" href="assets/images/logo.svg">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/fontawesome.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
@@ -73,7 +72,7 @@
             </a>
           </li>
           <li>
-            <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#verifyStudentModal">
+            <a class="btn btn-primary" href="contact.html">
               <span class="btn_text" data-text="Verify Student">
                 Verify Student
               </span>
@@ -107,7 +106,7 @@
             <div class="col-lg-8">
               <a class="gallery_item popup_image" href="assets/images/gallery/gallery_image_7-min.jpg">
                 <img src="assets/images/gallery/gallery_image_7-min.jpg"
-                  alt="Talking Minds - Psychotherapist Site Template">
+                  alt="Image">
               </a>
             </div>
             <div class="col-lg-4">
@@ -115,13 +114,13 @@
                 <div class="col-lg-12 col-md-6 col-sm-6">
                   <a class="gallery_item popup_image" href="assets/images/gallery/gallery_image_8-min.jpg">
                     <img src="assets/images/gallery/gallery_image_8-min.jpg"
-                      alt="Talking Minds - Psychotherapist Site Template">
+                      alt="Image">
                   </a>
                 </div>
                 <div class="col-lg-12 col-md-6 col-sm-6">
                   <a class="gallery_item popup_image" href="assets/images/gallery/gallery_image_9-min.jpg">
                     <img src="assets/images/gallery/gallery_image_9-min.jpg"
-                      alt="Talking Minds - Psychotherapist Site Template">
+                      alt="Image">
                   </a>
                 </div>
               </div>
@@ -129,19 +128,19 @@
             <div class="col-lg-4">
               <a class="gallery_item popup_image" href="assets/images/gallery/gallery_image_10-min.jpg">
                 <img src="assets/images/gallery/gallery_image_10-min.jpg"
-                  alt="Talking Minds - Psychotherapist Site Template">
+                  alt="Image">
               </a>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
               <a class="gallery_item popup_image" href="assets/images/gallery/gallery_image_11-min.jpg">
                 <img src="assets/images/gallery/gallery_image_11-min.jpg"
-                  alt="Talking Minds - Psychotherapist Site Template">
+                  alt="Image">
               </a>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
               <a class="gallery_item popup_image" href="assets/images/gallery/gallery_image_3-min.jpg">
                 <img src="assets/images/gallery/gallery_image_3-min.jpg"
-                  alt="Talking Minds - Psychotherapist Site Template">
+                  alt="Image">
               </a>
             </div>
           </div>
@@ -182,11 +181,11 @@
                   </a>
                 </li>
                 <li>
-                  <a href="course.html">
+                  <a href="service.html">
                     <span class="info_icon">
                       <i class="fa-solid fa-circle"></i>
                     </span>
-                    <span class="info_text">Courses</span>
+                    <span class="info_text">Program</span>
                   </a>
                 </li>
                 <li>
@@ -233,67 +232,38 @@
     <!-- Site Footer - End ========== -->
 
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    $('.popup_video').magnificPopup({
+      type: 'iframe',
+      preloader: false,
+      removalDelay: 160,
+      mainClass: 'mfp-fade',
+      fixedContentPos: false
+    });
 
-  <!-- Student Verify Modal - End ========== -->
-  <div class="modal fade" id="verifyStudentModal" tabindex="-1" aria-labelledby="verifyStudentModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-body">
-          <div class="bg_primary_light p-5 rounded-4">
-            <div class="section_heading text-center">
-              <h2 class="section_heading_text">
-                <span class="d-md-block">Verify Student</span> By ID
-              </h2>
-            </div>
-            <div class="form-group">
-              <input id="input_name" class="form-control" type="text" placeholder="Enter Student Id" id="Student-ID"">
-              </div>
-            </div>
-          </div>
-          <div class=" modal-footer d-flex justify-content-center">
-              <a href="student-details.html" type="submit" class="btn btn-primary">
-                <span class="btn_text" data-text="Verify Now"> Verify Now </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Student Verify Modal - End ========== -->
+    $('.zoom-gallery').magnificPopup({
+      delegate: '.popup_image',
+      type: 'image',
+      closeOnContentClick: false,
+      closeBtnInside: false,
+      mainClass: 'mfp-with-zoom mfp-img-mobile',
+      gallery: {
+        enabled: true
+      },
+      zoom: {
+        enabled: true,
+        duration: 300,
+        opener: function (element) {
+          return element.find('img');
+        }
+      }
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-      <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-      <script src="assets/js/main.js"></script>
-      <script>
-        $('.popup_video').magnificPopup({
-          type: 'iframe',
-          preloader: false,
-          removalDelay: 160,
-          mainClass: 'mfp-fade',
-          fixedContentPos: false
-        });
-
-        $('.zoom-gallery').magnificPopup({
-          delegate: '.popup_image',
-          type: 'image',
-          closeOnContentClick: false,
-          closeBtnInside: false,
-          mainClass: 'mfp-with-zoom mfp-img-mobile',
-          gallery: {
-            enabled: true
-          },
-          zoom: {
-            enabled: true,
-            duration: 300,
-            opener: function (element) {
-              return element.find('img');
-            }
-          }
-
-        });
-      </script>
+    });
+  </script>
 
 </body>
 
