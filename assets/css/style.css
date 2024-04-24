@@ -4467,3 +4467,45 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 }
 
 /* End Student Verify Modal */
+
+
+/* Create three equal columns that floats next to each other */
+.column {
+  display: none;
+  /* Hide columns by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.tab-btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Add a grey background color on mouse-over */
+.tab-btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background color to the active button */
+.tab-btn.active {
+  background-color: var(--bs-primary);
+  color: white;
+}
+
+#myBtnContainer {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 24px;
+}

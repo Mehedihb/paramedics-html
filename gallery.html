@@ -25,7 +25,6 @@
     />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
   </head>
-
   <body>
     <div class="page_wrapper">
       <!-- Site Header - Start ========== -->
@@ -101,14 +100,18 @@
               </a>
             </li>
             <li>
-              <a class="btn btn-primary" href="contact.html">
+              <button
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#verifyModal"
+              >
                 <span class="btn_text" data-text="Verify Student">
                   Verify Student
                 </span>
                 <span class="btn_icon">
                   <i class="fa-solid fa-arrow-up-right"></i>
                 </span>
-              </a>
+              </button>
             </li>
           </ul>
         </div>
@@ -131,47 +134,25 @@
         <!-- Page Banner - End ========== -->
 
         <!-- Gallery Section - Start ========== -->
-        <div class="gallery_section section_space_lg">
+        <div class="gallery_section section_space_sm">
           <div class="container">
+            <div id="myBtnContainer">
+              <button
+                class="btn tab-btn active"
+                onclick="filterSelection('all')"
+              >
+                Show all
+              </button>
+              <button class="btn tab-btn" onclick="filterSelection('photos')">
+                Photos
+              </button>
+              <button class="btn tab-btn" onclick="filterSelection('videos')">
+                Videos
+              </button>
+            </div>
+
             <div class="zoom-gallery row justify-content-center">
-              <div class="col-lg-8">
-                <a
-                  class="gallery_item popup_image"
-                  href="assets/images/gallery/gallery_image_7-min.jpg"
-                >
-                  <img
-                    src="assets/images/gallery/gallery_image_7-min.jpg"
-                    alt="Image"
-                  />
-                </a>
-              </div>
-              <div class="col-lg-4">
-                <div class="row">
-                  <div class="col-lg-12 col-md-6 col-sm-6">
-                    <a
-                      class="gallery_item popup_image"
-                      href="assets/images/gallery/gallery_image_8-min.jpg"
-                    >
-                      <img
-                        src="assets/images/gallery/gallery_image_8-min.jpg"
-                        alt="Image"
-                      />
-                    </a>
-                  </div>
-                  <div class="col-lg-12 col-md-6 col-sm-6">
-                    <a
-                      class="gallery_item popup_image"
-                      href="assets/images/gallery/gallery_image_9-min.jpg"
-                    >
-                      <img
-                        src="assets/images/gallery/gallery_image_9-min.jpg"
-                        alt="Image"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
+              <div class="col-lg-4 column photos">
                 <a
                   class="gallery_item popup_image"
                   href="assets/images/gallery/gallery_image_10-min.jpg"
@@ -182,27 +163,67 @@
                   />
                 </a>
               </div>
-              <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="col-lg-4 column photos">
                 <a
                   class="gallery_item popup_image"
-                  href="assets/images/gallery/gallery_image_11-min.jpg"
+                  href="assets/images/gallery/gallery_image_10-min.jpg"
                 >
                   <img
-                    src="assets/images/gallery/gallery_image_11-min.jpg"
+                    src="assets/images/gallery/gallery_image_10-min.jpg"
                     alt="Image"
                   />
                 </a>
               </div>
-              <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="column photos col-lg-4">
                 <a
                   class="gallery_item popup_image"
-                  href="assets/images/gallery/gallery_image_3-min.jpg"
+                  href="assets/images/gallery/gallery_image_10-min.jpg"
                 >
                   <img
-                    src="assets/images/gallery/gallery_image_3-min.jpg"
+                    src="assets/images/gallery/gallery_image_10-min.jpg"
                     alt="Image"
                   />
                 </a>
+              </div>
+
+              <div class="column videos col-lg-4">
+                <iframe
+                  class="gallery_item"
+                  width="100%"
+                  height="300px"
+                  src="https://www.youtube.com/embed/y-Q8hb8y25o"
+                  title="main chand sitare ki kariye song(4k Official Video) | Mainu Ishq Ho Gaya Akhiyan Naal | Punjabi Song"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="column videos col-lg-4">
+                <iframe
+                  class="gallery_item"
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/y-Q8hb8y25o"
+                  title="main chand sitare ki kariye song(4k Official Video) | Mainu Ishq Ho Gaya Akhiyan Naal | Punjabi Song"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="column videos col-lg-4">
+                <iframe
+                  class="gallery_item"
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/y-Q8hb8y25o"
+                  title="main chand sitare ki kariye song(4k Official Video) | Mainu Ishq Ho Gaya Akhiyan Naal | Punjabi Song"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
               </div>
             </div>
           </div>
@@ -303,10 +324,60 @@
       </footer>
       <!-- Site Footer - End ========== -->
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      filterSelection("all"); // Execute the function and show all columns
+      function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("column");
+        if (c == "all") c = "";
+        // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+        for (i = 0; i < x.length; i++) {
+          w3RemoveClass(x[i], "show");
+          if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+      }
+
+      // Show filtered elements
+      function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          if (arr1.indexOf(arr2[i]) == -1) {
+            element.className += " " + arr2[i];
+          }
+        }
+      }
+
+      // Hide elements that are not selected
+      function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);
+          }
+        }
+        element.className = arr1.join(" ");
+      }
+
+      // Add active class to the current button (highlight it)
+      var btnContainer = document.getElementById("myBtnContainer");
+      var btns = btnContainer.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+    </script>
     <script>
       $(".popup_video").magnificPopup({
         type: "iframe",
