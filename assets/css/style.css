@@ -4447,3 +4447,23 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
   margin: 0px;
   color: var(--bs-dark);
 }
+
+
+/* Start Student Verify Modal */
+#verifyModal .btn-close {
+  font-size: 16px;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bs-primary);
+}
+
+#verifyModal .bg_primary_light {
+  border-radius: 16px;
+  padding: 40px;
+}
+
+/* End Student Verify Modal */
