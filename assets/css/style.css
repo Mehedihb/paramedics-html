@@ -1106,79 +1106,7 @@ button[class*="-dark"]:hover {
   border-color: var(--bs-primary);
 }
 
-/* Start Custome Checkbox */
 
-.radio-container {
-  display: flex;
-  gap: 24px;
-  justify-content: start;
-}
-
-.radio-container .single-radio [type="checkbox"]:not(:checked),
-.radio-container .single-radio [type="radio"]:checked,
-.radio-container .single-radio [type="radio"]:not(:checked) {
-  position: absolute;
-  left: -9999px;
-  width: 0;
-  height: 0;
-  visibility: hidden;
-}
-
-.radio-container .single-radio .checkbox-tools:checked+label,
-.radio-container .single-radio .checkbox-tools:not(:checked)+label {
-  width: 100%;
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  border: 1px solid var(--bs-border-color);
-  -webkit-transition: all 300ms linear;
-  transition: all 300ms linear;
-  padding: 16px 32px;
-}
-
-.radio-container .single-radio .checkbox-tools:checked+label {
-  background-color: var(--bs-primary);
-}
-
-.radio-container .single-radio .checkbox-tools:checked+label::before,
-.radio-container .single-radio .checkbox-tools:not(:checked)+label::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--bs-primary);
-  border: 1px solid var(--bs-primary);
-  z-index: -1;
-}
-
-.radio-container .single-radio .checkbox-tools:checked+label span,
-.radio-container .single-radio .checkbox-tools:not(:checked)+label span {
-  height: 80px;
-  width: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.radio-container .single-radio .checkbox-tools:checked+label span img,
-.radio-container .single-radio .checkbox-tools:not(:checked)+label span img {
-  height: 100%;
-  width: 100%;
-}
-
-.radio-container .single-radio .checkbox-tools:checked+label p,
-.radio-container .single-radio .checkbox-tools:not(:checked)+label p {
-  font-weight: 600;
-  font-size: 16px;
-  margin: 0px;
-  color: var(--bs-dark);
-}
 
 .gmap_canvas {
   height: 100%;
@@ -2014,112 +1942,27 @@ button[class*="-dark"]:hover {
 ================================================== */
 /* 5.02 - All Details Pages - Start
 ================================================== */
-[class*="_details_section"] .details_image {
+.details_content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.details_content img {
   overflow: hidden;
-  margin-bottom: 30px;
+  width: 100%;
+  display: block;
   border-radius: var(--bs-border-radius);
 }
 
-[class*="_details_section"] .details_image img {
-  width: 100%;
-  display: block;
-}
-
-[class*="_details_section"] .details_content p {
-  font-size: 20px;
+.details_content p {
+  font-size: 18px;
   line-height: 32px;
-  margin-bottom: 40px;
 }
 
 .details_info_title {
-  font-size: 24px;
-  line-height: 30px;
-  margin-bottom: 20px;
-}
-
-.prev_next_post_nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.prev_next_post_nav>a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 270px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.prev_next_post_nav>a .item_icon {
-  width: 40px;
-  height: 40px;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 40px;
-  flex: 0 0 40px;
-  margin: 0 20px 0 0;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  color: var(--bs-primary);
-  -webkit-transition: var(--bs-transition);
-  transition: var(--bs-transition);
-  border-radius: var(--bs-border-radius-pill);
-  background-color: var(--bs-primary-bg-subtle);
-}
-
-.prev_next_post_nav>a b {
-  display: block;
-  color: #51565d;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 18px;
-  margin-bottom: 2px;
-}
-
-.prev_next_post_nav>a strong {
-  display: block;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 26px;
-  color: var(--bs-dark);
-  -webkit-transition: var(--bs-transition);
-  transition: var(--bs-transition);
-  font-family: var(--bs-font-heading);
-}
-
-.prev_next_post_nav>a:last-child {
-  text-align: right;
-}
-
-.prev_next_post_nav>a:last-child .item_icon {
-  -webkit-box-ordinal-group: 2;
-  -ms-flex-order: 1;
-  order: 1;
-  margin: 0 0 0 20px;
-}
-
-.prev_next_post_nav>a:hover .item_icon {
-  color: var(--bs-white);
-  background-color: var(--bs-primary);
-}
-
-.prev_next_post_nav>a:hover strong {
-  color: var(--bs-primary);
+  font-size: 22px;
+  line-height: 32px;
 }
 
 .service_author,
@@ -2128,24 +1971,6 @@ button[class*="-dark"]:hover {
   background-color: var(--bs-white);
   border-radius: var(--bs-border-radius);
   box-shadow: var(--bs-box-shadow);
-}
-
-/* .service_author:hover,
-.boxcontainer-widget:hover {
-  -webkit-transform: translateY(4px);
-  transform: translateY(4px);
-  -webkit-box-shadow: var(--bs-box-shadow);
-  box-shadow: var(--bs-box-shadow);
-} */
-
-.service_author .details_info_title,
-.boxcontainer-widget .details_info_title {
-  margin-bottom: 30px;
-}
-
-.service_author p,
-.boxcontainer-widget p {
-  margin-bottom: 30px;
 }
 
 .service_author .author_image {
@@ -2175,15 +2000,6 @@ button[class*="-dark"]:hover {
   line-height: 28px;
   margin-bottom: 16px;
   color: var(--bs-primary);
-}
-
-.service_author.shadow-none {
-  background-color: var(--bs-primary-bg-subtle);
-}
-
-.service_author.shadow-none:hover {
-  -webkit-transform: unset;
-  transform: unset;
 }
 
 .boxcontainer-widget .item_price {
@@ -2354,11 +2170,6 @@ button[class*="-dark"]:hover {
 
   .hero_section {
     padding: 160px 0 100px;
-  }
-
-  .hero_section .shape_leaf {
-    top: 110px;
-    max-width: 250px;
   }
 
   .section_space_lg {
@@ -2566,10 +2377,9 @@ button[class*="-dark"]:hover {
     font-size: 26px;
   }
 
-  [class*="_details_section"] .details_content p {
+  .details_content p {
     font-size: 18px;
     line-height: 30px;
-    margin-bottom: 30px;
   }
 
   .details_info_title {
@@ -2698,13 +2508,7 @@ button[class*="-dark"]:hover {
   .service_author .author_image {
     margin: 0 0 30px 0;
   }
-}
 
-/* Media Screen 991px - End
-================================================== */
-/* Media Screen 767px - Start
-================================================== */
-@media screen and (max-width: 767px) {
   .section_heading .section_heading_description {
     font-size: 16px;
     line-height: 26px;
@@ -2719,50 +2523,9 @@ button[class*="-dark"]:hover {
   }
 }
 
-/* Media Screen 767px - End
+/* Media Screen 991px - End
 ================================================== */
-/* Media Screen 680px - Start
-================================================== */
-@media screen and (max-width: 680px) {
-  .prev_next_post_nav {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
 
-  .prev_next_post_nav>a {
-    width: 100%;
-    padding: 30px;
-    max-width: 100%;
-    border-radius: var(--bs-border-radius);
-    background-color: var(--bs-primary-bg-subtle);
-  }
-
-  .prev_next_post_nav>a:not(:last-child) {
-    margin-bottom: 15px;
-  }
-
-  .prev_next_post_nav>a .item_icon {
-    background-color: var(--bs-white);
-  }
-
-  .prev_next_post_nav>a:last-child {
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-  }
-
-  .copyright_widget {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-/* Media Screen 680px - End
-================================================== */
 /* Media Screen 575px - Start
 ================================================== */
 @media screen and (max-width: 575px) {
@@ -2794,7 +2557,7 @@ button[class*="-dark"]:hover {
     padding: 20px 0;
   }
 
-  [class*="_details_section"] .details_content p {
+  .details_content p {
     font-size: 16px;
     line-height: 26px;
   }
@@ -2811,6 +2574,13 @@ button[class*="-dark"]:hover {
   .social_links a {
     width: 34px;
     height: 34px;
+  }
+
+  .copyright_widget {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -3141,3 +2911,75 @@ button[class*="-dark"]:hover {
 }
 
 /* Start Student Card Area */
+
+/* Start Custome Checkbox */
+
+.radio-container {
+  display: flex;
+  gap: 16px;
+  justify-content: start;
+}
+
+.radio-container .single-radio [type="checkbox"]:not(:checked),
+.radio-container .single-radio [type="radio"]:checked,
+.radio-container .single-radio [type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.radio-container .single-radio .checkbox-tools:checked+label,
+.radio-container .single-radio .checkbox-tools:not(:checked)+label {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid var(--bs-border-color);
+  -webkit-transition: all 300ms linear;
+  transition: all 300ms linear;
+  padding: 16px 16px;
+}
+
+.radio-container .single-radio .checkbox-tools:checked+label {
+  background-color: var(--bs-primary);
+}
+
+.radio-container .single-radio .checkbox-tools:checked+label::before,
+.radio-container .single-radio .checkbox-tools:not(:checked)+label::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.radio-container .single-radio .checkbox-tools:checked+label span,
+.radio-container .single-radio .checkbox-tools:not(:checked)+label span {
+  height: 80px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio-container .single-radio .checkbox-tools:checked+label span img,
+.radio-container .single-radio .checkbox-tools:not(:checked)+label span img {
+  height: 100%;
+  width: 100%;
+}
+
+.radio-container .single-radio .checkbox-tools:checked+label p,
+.radio-container .single-radio .checkbox-tools:not(:checked)+label p {
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0px;
+  color: var(--bs-dark);
+}
