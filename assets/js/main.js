@@ -11,7 +11,7 @@ window.addEventListener("scroll", function () {
 // Sticky Header - End
 
 // Swiper Slider - Start
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".testimonialSwiper", {
   slidesPerView: 1,
   spaceBetween: 10,
   pagination: {
@@ -28,6 +28,10 @@ var swiper = new Swiper(".mySwiper", {
       spaceBetween: 20,
     },
     1024: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    1920: {
       slidesPerView: 2,
       spaceBetween: 40,
     },
