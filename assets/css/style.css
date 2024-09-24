@@ -370,6 +370,7 @@ mark {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  justify-content: space-between;
 }
 
 [class*="unordered_list"]>li {
@@ -1309,6 +1310,7 @@ button[class*="-dark"]:hover {
   display: flex;
   gap: 40px;
   align-items: center;
+  width: 100%;
 }
 
 .site_header .site_logo img {
@@ -1323,8 +1325,8 @@ button[class*="-dark"]:hover {
 }
 
 .mobile_menu_btn {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1346,6 +1348,7 @@ button[class*="-dark"]:hover {
 
 .main_menu {
   padding: 0;
+  width: 100%;
 }
 
 .main_menu_list>li:not(:last-child) {
@@ -2531,11 +2534,12 @@ button[class*="-dark"]:hover {
 @media screen and (max-width: 575px) {
   .main_menu {
     top: 68px;
+    width: 100%;
   }
 
-  .right-section>li:not(:first-child) {
+  /* .right-section>li:not(:first-child) {
     display: none;
-  }
+  } */
 
   .hero_section {
     padding: 120px 0 100px;

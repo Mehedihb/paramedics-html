@@ -32,7 +32,7 @@
         <div
           class="container-fluid d-flex align-content-center justify-content-between"
         >
-          <div class="left-section">
+          <div class="left-section flex-fill">
             <a class="site_logo" href="index.html">
               <img src="assets/images/logo.svg" alt="Logo" />
             </a>
@@ -74,11 +74,31 @@
                   <li>
                     <a class="nav-link" href="contact.html">Contact Us</a>
                   </li>
+                  <div class="d-flex gap-4">
+                    <a class="btn_hotline" href="tel:+8801680636189">
+                      <span class="btn_icon">
+                        <i class="fa-solid fa-phone"></i>
+                      </span>
+                      <span class="btn_text">+880123456789</span>
+                    </a>
+                    <button
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#verifyModal"
+                  >
+                    <span class="btn_text" data-text="Verify Student">
+                      Verify Student
+                    </span>
+                    <span class="btn_icon">
+                      <i class="fa-solid fa-arrow-up-right"></i>
+                    </span>
+                  </button>
+                  </div>
                 </ul>
               </div>
             </nav>
           </div>
-          <ul class="right-section">
+          <ul class="right-section flex-fill">
             <li>
               <button
                 class="mobile_menu_btn"
@@ -91,28 +111,20 @@
                 <i class="far fa-bars"></i>
               </button>
             </li>
-            <li>
-              <a class="btn_hotline" href="tel:+8801680636189">
-                <span class="btn_icon">
-                  <i class="fa-solid fa-phone"></i>
-                </span>
-                <span class="btn_text">+880123456789</span>
-              </a>
-            </li>
-            <li>
+            <!-- <li>
               <button
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#verifyModal"
-              >
-                <span class="btn_text" data-text="Verify Student">
-                  Verify Student
-                </span>
-                <span class="btn_icon">
-                  <i class="fa-solid fa-arrow-up-right"></i>
-                </span>
-              </button>
-            </li>
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#verifyModal"
+            >
+              <span class="btn_text" data-text="Verify Student">
+                Verify Student
+              </span>
+              <span class="btn_icon">
+                <i class="fa-solid fa-arrow-up-right"></i>
+              </span>
+            </button>
+            </li> -->
           </ul>
         </div>
       </header>
