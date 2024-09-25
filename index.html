@@ -30,15 +30,15 @@
       <!-- Site Header - Start ========== -->
       <header class="site_header">
         <div
-          class="container-fluid d-flex align-content-center justify-content-between"
+          class="container-fluid d-flex align-content-center justify-content-between gap-3"
         >
-          <div class="left-section flex-fill">
+          <div class="left-section">
             <a class="site_logo" href="index.html">
               <img src="assets/images/logo.svg" alt="Logo" />
             </a>
             <nav class="main_menu navbar navbar-expand-lg">
               <div
-                class="main_menu_inner collapse navbar-collapse justify-content-center"
+                class="main_menu_inner collapse navbar-collapse"
                 id="main_menu_dropdown"
               >
                 <ul class="main_menu_list unordered_list">
@@ -74,44 +74,20 @@
                   <li>
                     <a class="nav-link" href="contact.html">Contact Us</a>
                   </li>
-                  <div class="d-flex gap-4">
+                  <li>
                     <a class="btn_hotline" href="tel:+8801680636189">
                       <span class="btn_icon">
                         <i class="fa-solid fa-phone"></i>
                       </span>
                       <span class="btn_text">+880123456789</span>
                     </a>
-                    <button
-                    class="btn btn-primary"
-                    data-bs-toggle="modal"
-                    data-bs-target="#verifyModal"
-                  >
-                    <span class="btn_text" data-text="Verify Student">
-                      Verify Student
-                    </span>
-                    <span class="btn_icon">
-                      <i class="fa-solid fa-arrow-up-right"></i>
-                    </span>
-                  </button>
-                  </div>
+                  </li>
                 </ul>
               </div>
             </nav>
           </div>
-          <ul class="right-section flex-fill">
+          <ul class="right-section">
             <li>
-              <button
-                class="mobile_menu_btn"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#main_menu_dropdown"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <i class="far fa-bars"></i>
-              </button>
-            </li>
-            <!-- <li>
               <button
               class="btn btn-primary"
               data-bs-toggle="modal"
@@ -124,7 +100,19 @@
                 <i class="fa-solid fa-arrow-up-right"></i>
               </span>
             </button>
-            </li> -->
+            </li>
+            <li>
+              <button
+                class="mobile_menu_btn"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#main_menu_dropdown"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <i class="far fa-bars"></i>
+              </button>
+            </li>
           </ul>
         </div>
       </header>

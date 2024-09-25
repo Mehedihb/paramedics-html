@@ -1350,9 +1350,20 @@ button[class*="-dark"]:hover {
   padding: 0;
   width: 100%;
 }
+.main_menu_list {
+display: flex;
+gap: 4px;
+width: 100%;
+}
 
 .main_menu_list>li:not(:last-child) {
   margin: 0 16px 0 0;
+}
+.main_menu_list>li:last-child {
+  margin-left: auto;
+}
+.main_menu_list>li:last-child:hover>a {
+  background-color: transparent;
 }
 
 .main_menu_list>li>a {
@@ -1463,9 +1474,10 @@ button[class*="-dark"]:hover {
   align-items: center;
   justify-content: end;
   gap: 16px;
+  flex-shrink: 0;
 }
 
-.right-section>li:first-child {
+.right-section>li:last-child {
   display: none;
 }
 
@@ -2410,20 +2422,21 @@ button[class*="-dark"]:hover {
     padding: 15px 0px;
   }
 
-  .right-section>li:first-child {
-    display: inline-block;
+  .right-section>li:last-child {
+    display: block;
   }
 
   .main_menu {
     left: 0;
     right: 0;
-    top: 69px;
+    top: 80px;
     z-index: 999;
     position: fixed;
   }
 
   .main_menu_inner {
-    padding: 0 15px;
+    padding: 0 16px;
+    width: 100%;
   }
 
   .main_menu_list>li {
@@ -2434,7 +2447,7 @@ button[class*="-dark"]:hover {
 
   .main_menu_list {
     margin: auto;
-    padding: 15px;
+    padding: 16px;
     max-width: 730px;
     border-radius: 10px;
     background-color: var(--bs-white);
@@ -2533,14 +2546,9 @@ button[class*="-dark"]:hover {
 ================================================== */
 @media screen and (max-width: 575px) {
   .main_menu {
-    top: 68px;
+    top: 80px;
     width: 100%;
   }
-
-  /* .right-section>li:not(:first-child) {
-    display: none;
-  } */
-
   .hero_section {
     padding: 120px 0 100px;
   }
